@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dodda</title>
+</head>
+<body>
+
+<% projects.forEach(function(project){ %>
+	
+    <div class="row">
+    <a href="/user/<%= project.username %>"><%= project.username %></a>
+    
+    <% project.Link.forEach(function(link){ %>
+        <p><%= link %></p>
+        
+    <% }); %>
+
+    <% project.Images.forEach(function(img){ %>
+        <img src="<%= img %>">
+    <% }); %>                       
+    </div>
+
+<% }); %>
+
+</body>
+</html>
